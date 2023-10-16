@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet } from "react-native";
 
 
+
 export const IndexScreen = () =>
 {
     return(
@@ -11,14 +12,11 @@ export const IndexScreen = () =>
             <Text style={styles.font_one}> Bryan Josue Ortega Casillas</Text>
             <View style={styles.container_second}>
                 <Text style={styles.font_two}>Abono semanal para mi casa</Text>
-                <Text>Pago 05/10/23 </Text>
+                <Text style={{marginLeft:10}}>Pago 05/10/23 </Text>
                 <View style={styles.container_intern} >
-                <Text>$6008</Text>
-                <Text>$28,678</Text>
-                </View>
-               
-               
-                
+                <Text style={{color:'green', fontSize:15}}>$6008</Text>
+                <Text style={{color:'green',fontSize:15}}>$28,678</Text>
+                </View>    
             </View>
             <View style={styles.container_button}> 
                 <Button
@@ -66,13 +64,17 @@ const styles = StyleSheet.create({
         borderRadius: 10, 
         width: '60%',
     },
+    boton: {
+        width: '20%'
+    },
     font_one:{
         fontWeight: 'bold',
         fontSize: 20
     },
     font_two:{
         fontWeight:'300',
-        fontSize: 20
+        fontSize: 20,
+        marginLeft: 10
     }
 });
 export default IndexScreen

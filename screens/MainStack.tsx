@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import HomeScreen from './HomeScreen'
 import { RegisterScreen } from './Register'
 import IndexScreen from '.'
+import InfoHipoteca from './InfoHipoteca'
 
 
 const Stack = createNativeStackNavigator()
@@ -24,6 +25,9 @@ export const MainStack = () =>{
         <Stack.Screen
         name='Inicio'
         component={IndexScreen}/>
+        <Stack.Screen
+        name='Hipoteca'
+        component={InfoHipoteca}/>
 
         </Stack.Navigator>
 

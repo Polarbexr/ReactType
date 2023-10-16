@@ -3,11 +3,14 @@ import { Text, View, Button, Alert,  TextInput} from 'react-native';
 import { Image } from 'react-native-elements';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { StyleSheet } from "react-native";
+import { Linking, Platform } from 'react-native';
+import { Link } from '@react-navigation/native';
 
 type RootStackParamList = {
   HomeScreen: undefined;
   Register: undefined;
   Inicio: undefined;
+  Hipoteca: undefined;
 };
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
@@ -49,6 +52,15 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         title="¿No tienes una cuenta?"
         onPress={() => {
           navigation.navigate('Register');
+        }}
+        color="blue"
+      />
+      </View>
+      <View style ={styles.buttonContainer}>
+      <Button
+        title="Boton de prueba"
+        onPress={() => {
+          navigation.navigate('Hipoteca');
         }}
         color="blue"
       />
